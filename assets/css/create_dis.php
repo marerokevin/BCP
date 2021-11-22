@@ -22,6 +22,59 @@ html, body {
   font-size: 17px;
 }
 
+.topnav a:hover {
+  background-color: #368CB5;
+  color: #000000;
+}
+
+.topnav a.active {
+  background-color: #368CB5;
+  color: white;
+}
+
+.bar{
+    width: 100%;
+    background: #fff;
+    height: 3px;
+    margin-bottom: 5px;
+}
+
+.topnav .icon {
+  color: #654654;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    width: 30px;
+    height: 20px;
+    float: right;
+    display: block;
+    color: #ffffff;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 0;
+    top: 0;
+    color: #ffffff;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .icon {
+  width: 48px;
+  height: 48px;
+  color: #654654;
+  padding-bottom: 3px;
+  color: #ffffff;
+}
+}
+
 form[class=disaster_form] {
 	padding-left: 5%;
 	padding-right: 5%;

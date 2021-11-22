@@ -12,19 +12,7 @@ include "serve_c.php"
     </head>
     <body>
 <!-- Top Nav -->
- <div class="topnav" id="myTopnav">
-    <a href="./dashboard.php">Home</a>
-    <a href="./create_dis.php">Input Disaster</a>
-    <a href="./form.php">Create</a>
-    <a href="./edit.php">Update</a>
-    <a href="./delete_tab.php"  class="active">Delete</a>
-    <a href="./logout.php">Logout</a>
-    <a class="icon" onclick="Burjer()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </a>
-  </div>
+<?php include 'topnav.php'; ?>
     <!--next-->
     <table class="table table-hover">
     <tr>

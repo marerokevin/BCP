@@ -41,6 +41,18 @@ div[type=currenttime] {
   padding: 7px;
 }
 
+.bar{
+    width: 100%;
+    background: #fff;
+    height: 3px;
+    margin-bottom: 5px;
+}
+
+.topnav .icon {
+  color: #654654;
+  display: none;
+}
+
 .topnav a.active {
   width: 45px;
   height: 20px;
