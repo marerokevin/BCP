@@ -22,7 +22,6 @@ include "serve_c.php"
     <th>Start Time</th>
     <th>End Time</th>
     <th>Status</th>
-
     <th class="button">               </th>
     </tr>
     <!--loop-->
@@ -38,13 +37,13 @@ include "serve_c.php"
     while($row=mysqli_fetch_array($result)){ 
       $Edate_str = strtotime($row['Edate']);
       $Ehour = $row['Ehour'];
+      $Emeridiem = $row['Emeridiem'];
       if ($Emeridiem="PM") {
         $Ehour_24 = $Ehour + 12;
       } else {
         $Ehour_24 = $Ehour;
       }
       $Eminute = $row['Eminute'];
-      $Emeridiem = $row['Emeridiem'];
     if ($curdate < $Edate_str) {
       $stat_start = '<a type=button href="create_form.php?id="';
       $status_end = '" id="button">Edit</a>';
@@ -58,8 +57,6 @@ include "serve_c.php"
           $status_end = '" id="button" hidden></a>';
           $status = 'Ended';
         }
-
-      
       ?>
     <tr>
     <td><?php echo $row['dis_control_number'];?> <?php echo $curdate; ?> </td>
