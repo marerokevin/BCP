@@ -36,22 +36,34 @@ include "serve_c.php"
     $result = mysqli_query($conn,$sql);
     $control_num_q = mysqli_num_rows($result);
     while($row=mysqli_fetch_array($result)){ 
-      $Str_enddate = strtotime($row['Edate']);
-        if ($curdate < $Str_enddate) {
+      $Edate_str = strtotime($row['Edate']);
+      $Ehour = $row['Ehour'];
+      if ($Emeridiem="PM") {
+        $Ehour_24 = $Ehour + 12;
+      } else {
+        $Ehour_24 = $Ehour;
+      }
+      $Eminute = $row['Eminute'];
+      $Emeridiem = $row['Emeridiem'];
+    if ($curdate < $Edate_str) {
+      $stat_start = '<a type=button href="create_form.php?id="';
+      $status_end = '" id="button">Edit</a>';
+      $status = 'Ongoing';
+    } elseif (($curdate = $Edate_str) && ($curhour <= $Ehour)) {
           $stat_start = '<a type=button href="create_form.php?id="';
           $status_end = '" id="button">Edit</a>';
           $status = 'Ongoing';
-      } else {
+        } else {
           $stat_start = '<a type=button href="create_form.php?id="';
-          $status_end = '" id="button">Edit</a>';
+          $status_end = '" id="button" hidden></a>';
           $status = 'Ended';
-      }
+        }
 
       
       ?>
     <tr>
     <td><?php echo $row['dis_control_number'];?> <?php echo $curdate; ?> </td>
-    <td><?php echo $row['disaster_type'];?><?php echo $curhour;?> <?php echo $Str_enddate;?></td>
+    <td><?php echo $row['disaster_type'];?><?php echo $curhour;?> <?php echo $Edate_str;?> <?php echo $Ehour_24;?></td>
     <td><?php echo $row['disaster_desc'];?> <?php echo $curminute;?></td>
     <td><?php echo $row['Sdate'];?> <?php echo $row['Shour'];?>:<?php echo $row['Sminute'];?> <?php echo $row['Smeridiem'];?></td>
     <td><?php echo $row['Edate'];?> <?php echo $row['Ehour'];?>:<?php echo $row['Eminute'];?> <?php echo $row['Emeridiem'];?></td>
