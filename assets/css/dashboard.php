@@ -3,6 +3,7 @@
 ?>
 html, body {
   margin: 0;
+  background: #f0f2f5;
   font-family: Helvetica;
 }
 
@@ -284,7 +285,7 @@ button[type=submit] {
 	border: 1px solid #a6a6a6;
 	width: 90px;
 	height: 43px;
-	border-radius: 30px;
+	border-radius: 6px;
 	outline: none;
 	background: rgb(54,140,181); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgb(54,140,181) 0%, rgb(42,109,140) 100%); /* FF3.6+ */

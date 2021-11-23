@@ -62,7 +62,7 @@ h2{
 .username,.username_err {
 	width: 230px;
 	height: 40px;
-	border: 1px solid #a6a6a6;
+	border: 1px solid #dddfe2;
 	border-radius: 3px;
 	margin-top: 5px;
   	margin-right: 3px;
@@ -75,7 +75,7 @@ h2{
 .password, .password_err {
 	width: 230px;
 	height: 40px;
-	border: 1px solid #a6a6a6;
+	border: 1px solid #dddfe2;
 	border-radius: 3px;
 	margin-top: 5px;
   	margin-right: 3px;
@@ -132,19 +132,19 @@ input:hover {
 	color:#fff;
 	font-size:20px;
 	border: 1px solid #a6a6a6;
-	width: 93%;
+	width: 100%;
 	height: 43px;
-	border-radius: 30px;
+	border-radius: 6px;
 	margin-top: 3px;
 	margin-right: 6px;
 	outline: none;
-	background: rgb(54,140,181); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgb(54,140,181) 0%, rgb(42,109,140) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(54,140,181)), color-stop(100%,rgb(42,109,140))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* W3C */
+	background: #166fe5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #166fe5 0%, rgb(42,109,140) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#166fe5), color-stop(100%,rgb(42,109,140))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #166fe5 0%,rgb(42,109,140) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #166fe5 0%,rgb(42,109,140) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #166fe5 0%,rgb(42,109,140) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #166fe5 0%,rgb(42,109,140) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
 }
 
@@ -173,13 +173,13 @@ div[name=login_form]{
 }
   
 .loginbtn:hover{
-  background: rgb(29,94,124); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgb(29,94,124) 0%, rgb(29,94,124) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(29,94,124)), color-stop(100%,rgb(29,94,124))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgb(29,94,124) 0%,rgb(29,94,124) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgb(29,94,124) 0%,rgb(29,94,124) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgb(29,94,124) 0%,rgb(29,94,124) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgb(29,94,124) 0%,rgb(29,94,124) 100%); /* W3C */
+  background:#124d9b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #124d9b 0%, #124d9b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#124d9b), color-stop(100%,#124d9b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #124d9b 0%,#124d9b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #124d9b 0%, #124d9b 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #124d9b 0%, #124d9b 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #124d9b 0%, #124d9b 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc0000',GradientType=0 ); /* IE6-9 */
 }
   

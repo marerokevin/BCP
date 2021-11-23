@@ -4,6 +4,7 @@
 
 html, body {
   margin: 0;
+  background: #f0f2f5;
   font-family: Helvetica;
 }
 
