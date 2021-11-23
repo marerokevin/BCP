@@ -11,7 +11,7 @@ html, body {
 	align-items: center;
 	align-content: center;
 	font-family: Helvetica;
-	background: #ffffff;
+	background: #f0f2f5;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -165,10 +165,11 @@ div[name=login_form]{
 	height=300px;
 	width=280px;
 	margin-right: 80px;
-	background: #eeecec;
-	border-color: #939393;
-	border-style: solid;
-	border-width: 0.5px;
+	background: #FFFFFF;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+	border-box: border-box;
 }
   
 .loginbtn:hover{

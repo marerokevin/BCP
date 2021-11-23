@@ -272,6 +272,8 @@ input[type=date] {
   width: 160px;
   text-align: center;
   outline: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 
 button[type=submit] {
