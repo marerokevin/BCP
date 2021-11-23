@@ -8,7 +8,7 @@ include "serve_c.php"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPI-BCP Form</title>
-    <link rel="stylesheet" type="text/css" href="/form-test/assets/css/edit.php">
+    <link rel="stylesheet" type="text/css" href="/form-test/assets/css/create.php">
     </head>
     <body>
 <!-- Top Nav -->
@@ -16,31 +16,47 @@ include "serve_c.php"
     <!--next-->
     <table class="table table-hover">
     <tr>
-    <th name="user_fname">Name</th>
-    <th>Date Encoded</th>
-    <th>Department</th>
-    <th>Control Number</th>
-    <th>Yes</th>
-    <th>No</th>
-    <th>No Information</th>
+    <th>Control Number </th>
+    <th>Disaster Description</th>
+    <th>Disaster Type</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Status</th>
+
     <th class="button">               </th>
     </tr>
     <!--loop-->
     <?php
+    date_default_timezone_set('Asia/Manila');
+    $curdate = strtotime(date('M d Y'));
+    $curhour = date('H');
+    $curminute = date('i');
     include 'dbconnect.php'; 
-    $user_eid = $_SESSION["username"];
-    $sql = "SELECT * FROM `workinfo` WHERE user_eid='$user_eid'";
+    $sql = "SELECT * FROM `disasterinfo`";
     $result = mysqli_query($conn,$sql);
-    while($row=mysqli_fetch_array($result)){ ?>
+    $control_num_q = mysqli_num_rows($result);
+    while($row=mysqli_fetch_array($result)){ 
+      $Str_enddate = strtotime($row['Edate']);
+        if ($curdate < $Str_enddate) {
+          $stat_start = '<a type=button href="create_form.php?id="';
+          $status_end = '" id="button">Edit</a>';
+          $status = 'Ongoing';
+      } else {
+          $stat_start = '<a type=button href="create_form.php?id="';
+          $status_end = '" id="button">Edit</a>';
+          $status = 'Ended';
+      }
+
+      
+      ?>
     <tr>
-    <td name="user_fname"><?php echo $row['user_fname'];?></td>
-    <td><?php echo $row['date_encoded'];?></td>
-    <td><?php echo $row['user_department'];?></td>
-    <td><?php echo $row['control_number'];?></td>
-    <td><?php echo $row['bcp_yes'];?></td>
-    <td><?php echo $row['bcp_no'];?></td>
-    <td><?php echo $row['bcp_info'];?></td>
-    <td><a type=button href="update.php?id=<?php echo $row['id'];?>" id="button">Edit</a></td>
+    <td><?php echo $row['dis_control_number'];?> <?php echo $curdate; ?> </td>
+    <td><?php echo $row['disaster_type'];?><?php echo $curhour;?> <?php echo $Str_enddate;?></td>
+    <td><?php echo $row['disaster_desc'];?> <?php echo $curminute;?></td>
+    <td><?php echo $row['Sdate'];?> <?php echo $row['Shour'];?>:<?php echo $row['Sminute'];?> <?php echo $row['Smeridiem'];?></td>
+    <td><?php echo $row['Edate'];?> <?php echo $row['Ehour'];?>:<?php echo $row['Eminute'];?> <?php echo $row['Emeridiem'];?></td>
+    <td><?php echo $status;?></td>
+    <td><?php echo $stat_start;?><?php echo $row['dis_control_number'];?><?php echo $status_end;?></td>
     </tr>
     <?php }?>
     </table>
