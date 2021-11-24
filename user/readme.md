@@ -19,3 +19,5 @@ users can only encode on the given time
   }
 
   check the alerts first before others
+
+  Pending gagawin bukas kasi tanga ka
