@@ -28,36 +28,44 @@ include "serve_c.php"
     <?php
     date_default_timezone_set('Asia/Manila');
     $curdate = strtotime(date('M d Y'));
-    $curhour = date('H');
+    $curhour = strtotime(date('H:ia'));
     $curminute = date('i');
-    
     include 'dbconnect.php'; 
     $sql = "SELECT * FROM `disasterinfo`";
     $result = mysqli_query($conn,$sql);
     $control_num_q = mysqli_num_rows($result);
-    while($row=mysqli_fetch_array($result)){ 
+    while (
+      
+      $row=mysqli_fetch_array($result)) {
       $Edate_str = strtotime($row['Edate']);
-      $Ehour = $row['Ehour'];
+      $Ehour = $row['Ehour']; 
+      $testtime = strtotime("7:00AM");
       $Emeridiem = $row['Emeridiem'];
-      $Eminute = $row['Eminute'];
       if ($Emeridiem="PM") {
         $Ehour_24 = $Ehour + 12;
       } else {
         $Ehour_24 = $Ehour;
       }
-    if (($curdate < $Edate_str) || (($curdate = $Edate_str) && (($curhour < $Ehour) || ($curhour = $Ehour)))) {
+      $Ehour = strtotime($row['Ehour']);
+      $Eminute = $row['Eminute'];
+      $control_num_q++;
+    if (
+      (($curdate < $Edate_str) || ($curdate < $Edate_str)) ||
+      ((($curdate < $Edate_str) || ($curdate < $Edate_str)) && (($curhour < $Ehour) ||($curhour = $Ehour))) ||
+      ((($curdate < $Edate_str) || ($curdate < $Edate_str)) && (($curhour < $Ehour) || ($curhour = $Ehour)) && (($curminute < $Eminute) ||
+      ($curminute = $Eminute))) && ($control_num_q <= $control_num_q)){
       $stat_start = '<a type=button href="create_form.php?id="';
       $status_end = '" id="button">Edit</a>';
       $status = 'Ongoing';
     } else {
-          $stat_start = '<a type=button href="create_form.php?id="';
-          $status_end = '" id="button" hidden></a>';
-          $status = 'Ended';
-        }
+      $stat_start = '<a type=button href="create_form.php?id="';
+      $status_end = '" id="button" hidden></a>';
+      $status = 'Ended';
+    }
       ?>
     <tr>
     <td><?php echo $row['dis_control_number'];?> <?php echo $curdate; ?> </td>
-    <td><?php echo $row['disaster_type'];?><?php echo $curhour;?> <?php echo $Edate_str;?></td>
+    <td><?php echo $row['disaster_type'];?><?php echo $curhour;?> <?php echo $testtime;?> <?php echo $Edate_str;?></td>
     <td><?php echo $row['disaster_desc'];?> <?php echo $curminute;?></td>
     <td><?php echo $row['Sdate'];?> <?php echo $row['Shour'];?>:<?php echo $row['Sminute'];?> <?php echo $row['Smeridiem'];?></td>
     <td><?php echo $row['Edate'];?> <?php echo $row['Ehour'];?>:<?php echo $row['Eminute'];?> <?php echo $row['Emeridiem'];?></td>

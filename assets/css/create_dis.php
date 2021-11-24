@@ -99,7 +99,7 @@ input{
 	height: 30px;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px solid #dddfe2;
+	border: 1px solid #8a8b8c;
 	border-radius: 3px;
 	margin-top: 5px;
   	margin-right: 3px;
@@ -117,7 +117,7 @@ select{
 	height: 34px;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px solid #dddfe2;
+	border: 1px solid #8a8b8c;
 	border-radius: 3px;
 	margin-top: 5px;
   	margin-right: 3px;
@@ -183,8 +183,8 @@ input:hover{
 
 .start-grid, .end-grid {
 	display: grid;
-	grid-template-columns: 24% 24% 24% 24%;
-	grid-gap: 2%;
+	grid-template-columns: 48% 48%;
+	grid-gap: 4%;
 	background-color: transparent;
 }
 
