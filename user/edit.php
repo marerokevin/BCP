@@ -15,34 +15,39 @@ include "serve_c.php"
 <?php include 'topnav.php'; ?>
     <!--next-->
     <table class="table table-hover">
-    <tr>
-    <th name="user_fname">Name</th>
-    <th>Date Encoded</th>
-    <th>Department</th>
-    <th>Control Number</th>
-    <th>Yes</th>
-    <th>No</th>
-    <th>No Information</th>
-    <th class="button">               </th>
-    </tr>
-    <!--loop-->
-    <?php
-    include 'dbconnect.php'; 
-    $user_eid = $_SESSION["username"];
-    $sql = "SELECT * FROM `workinfo` WHERE user_eid='$user_eid'";
-    $result = mysqli_query($conn,$sql);
-    while($row=mysqli_fetch_array($result)){ ?>
-    <tr>
-    <td name="user_fname"><?php echo $row['user_fname'];?></td>
-    <td><?php echo $row['date_encoded'];?></td>
-    <td><?php echo $row['user_department'];?></td>
-    <td><?php echo $row['control_number'];?></td>
-    <td><?php echo $row['bcp_yes'];?></td>
-    <td><?php echo $row['bcp_no'];?></td>
-    <td><?php echo $row['bcp_info'];?></td>
-    <td><a type=button href="update.php?id=<?php echo $row['id'];?>" id="button">Edit</a></td>
-    </tr>
-    <?php }?>
+        <caption>Update</caption>
+        <thead>
+            <tr>
+                <th scope="col" name="user_fname">Name</th>
+                <th>Date Encoded</th>
+                <th scope="col">Department</th>
+                <th scope="col">Control Number</th>
+                <th scope="col">Yes</th>
+                <th scope="col">No</th>
+                <th scope="col">No Information</th>
+                <th scope="col" class="button"></th>
+            </tr>
+        </thead>
+        <!--loop-->
+        <?php
+        include 'dbconnect.php'; 
+        $user_eid = $_SESSION["username"];
+        $sql = "SELECT * FROM `workinfo` WHERE user_eid='$user_eid'";
+        $result = mysqli_query($conn,$sql);
+        while($row=mysqli_fetch_array($result)){ ?>
+        <tbody>
+            <tr>
+                <td data-label="Name"><?php echo $row['user_fname'];?></td>
+                <td data-label="Date Encoded"><?php echo $row['date_encoded'];?></td>
+                <td data-label="Department"><?php echo $row['user_department'];?></td>
+                <td data-label="Control Number"><?php echo $row['control_number'];?></td>
+                <td data-label="Yes"><?php echo $row['bcp_yes'];?></td>
+                <td data-label="No"><?php echo $row['bcp_no'];?></td>
+                <td data-label="No Information"><?php echo $row['bcp_info'];?></td>
+                <td><a type=button href="update.php?id=<?php echo $row['id'];?>" id="button">Edit</a></td>
+            </tr>
+        </tbody>
+        <?php }?>
     </table>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

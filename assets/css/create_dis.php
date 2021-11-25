@@ -97,6 +97,7 @@ input{
 	margin-top: 2px;
 	width: 100%;
 	height: 30px;
+	font: Helvetica;
 	font-size: 15px;
 	border-radius: 5px;
 	border: 1px solid #8a8b8c;
@@ -104,28 +105,9 @@ input{
 	margin-top: 5px;
   	margin-right: 3px;
 	padding-left: 9px;
-	color: #6c6c6c;
+	color: #000000;
 	background: #fcfcfc;
 	outline: none;
-	font: Helvetica;
-}
-
-select{
-	margin-bottom: 8px;
-	margin-top: 2px;
-	width: 100%;
-	height: 34px;
-	font-size: 15px;
-	border-radius: 5px;
-	border: 1px solid #8a8b8c;
-	border-radius: 3px;
-	margin-top: 5px;
-  	margin-right: 3px;
-	padding-left: 9px;
-	color: #6c6c6c;
-	background: #fcfcfc;
-	outline: none;
-	font: Helvetica;
 }
 
 input:focus{

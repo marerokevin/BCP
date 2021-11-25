@@ -112,32 +112,32 @@ div[type=currenttime] {
     height: 20px;
     float: right;
     display: block;
-    width: 30px;
+    color: #ffffff;
   }
   .topnav-right {
   float: left;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
+    position: absolute;
     width: 30px;
     height: 20px;
-    position: absolute;
     right: 0;
     top: 0;
+    color: #ffffff;
   }
   .topnav.responsive a {
-    width: 47px;
-    height: 20px;
     float: none;
     display: block;
     text-align: left;
   }
-  .topnav-right {
-  float: left;
-  }
+  .icon {
+  width: 48px;
+  height: 48px;
+  color: #654654;
+  padding-bottom: 3px;
+  color: #ffffff;
+}
+
   th[class=yes], .td[class=yes] {
     width:33%;
     font-family: Helvetica;

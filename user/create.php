@@ -13,55 +13,63 @@ include "serve_c.php"
     <body>
 <!-- Top Nav -->
 <?php include 'topnav.php'; ?>
+
     <!--next-->
     <table class="table table-hover">
-    <tr>
-    <th>Control Number </th>
-    <th>Disaster Description</th>
-    <th>Disaster Type</th>
-    <th>Start Time</th>
-    <th>End Time</th>
-    <th>Status</th>
-    <th class="button">               </th>
-    </tr>
+    <caption>Create</caption>
+    <?php include 'search.php'; ?>
+        <thead>
+            <tr>
+                <th>Control Number </th>
+                <th>Disaster Description</th>
+                <th>Disaster Type</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Status</th>
+            </tr>
+        </thead>
     <!--loop-->
     <?php
     date_default_timezone_set('Asia/Manila');
-    $curdate = strtotime(date('M d Y'));
+    $curdatetime = date('M d Y H:i');
+    $curdatetime_str = strtotime($curdatetime);
     $curtime = date('H:i');
     $curtime_st = strtotime(date('H:i'));
     include 'dbconnect.php'; 
-    $sql = "SELECT * FROM `disasterinfo`";
-    $result = mysqli_query($conn,$sql);
-    $control_num_q = mysqli_num_rows($result);
-    while (
-      
-      $row=mysqli_fetch_array($result)) {
-      $Edate_str = strtotime($row['Edate']);
-      $Etime = strtotime($row['Etime']); 
-      $control_num_q++;
-      if (($curdate < $Edate_str)) {
-        $stat_start = '<a type=button href="create_form.php?id="';
-        $status_end = '" id="button">Edit</a>';
-        $status = 'Ongoing1';
-      } elseif ((($curtime_st < $Etime) && ($curtime_st = $Etime)) && ($curdate = $Edate_str)) {
-        $stat_start = '<a type=button href="create_form.php?id="';
-        $status_end = '" id="button">Edit</a>';
-        $status = 'Ongoing2';
-      } else {
-        $stat_start = '<a type=button href="create_form.php?id="';
-        $status_end = '" id="button" hidden></a>';
-        $status = 'Ended';
-      }
-      ?>
+    $sql = "SELECT * FROM `disasterinfo` order by id desc limit 6";
+    $result = mysqli_query($conn, $sql);
+    while ($row=mysqli_fetch_array($result)) {
+        $Edate = $row['Edate'];
+        $Etime = $row['Etime'];
+        $Sdate = $row['Sdate'];
+        $Stime = $row['Stime'];
+        $Edatetime = $Edate.' '.$Etime;
+        $Sdatetime = $Sdate.' '.$Stime;
+        $Sdate_display = date('M d Y h:ia', strtotime($Sdatetime));
+        $Edate_display = date('M d Y h:ia', strtotime($Edatetime));
+        $Edatetime_str = strtotime($Edatetime);
+        $Sdatetime_str = strtotime($Sdatetime);
+
+        if (($curdatetime_str > $Sdatetime_str) && ($curdatetime_str < $Edatetime_str)) {
+            $stat_start = '<a type=button-ongoing href="create_form.php?id=';
+            $status_end = '">Ongoing</a>';
+        } 
+        elseif (($curdatetime_str < $Sdatetime_str) and ($curdatetime_str < $Edatetime_str)) {
+            $stat_start = '<a type=button-pending href="create_form.php?id="';
+            $status_end = '">Pending</a>';
+        } 
+        else {
+            $stat_start = '<a type=button-done href="done.php"';
+            $status_end = '">Done</a>';
+        }
+    ?>
     <tr>
-    <td><?php echo $row['dis_control_number'];?></td>
-    <td><?php echo $row['disaster_type'];?></td>
-    <td><?php echo $row['disaster_desc'];?></td>
-    <td><?php echo $row['Sdate'];?> <?php echo $row['Stime'];?></td>
-    <td><?php echo $row['Edate'];?> <?php echo $row['Etime'];?></td>
-    <td><?php echo $status;?></td>
-    <td><?php echo $stat_start;?><?php echo $row['dis_control_number'];?><?php echo $status_end;?></td>
+    <td data-label="Control Number"><?php echo $row['dis_control_number'];?></td>
+    <td data-label="Disaster Type"><?php echo $row['disaster_type'];?></td>
+    <td data-label="Disaster Description"><?php echo $row['disaster_desc'];?></td>
+    <td data-label="Start"><?php echo $Sdate_display; ?></td>
+    <td data-label="End"><?php echo $Edate_display; ?></td>
+    <td data-label="Status"><?php echo $stat_start;?><?php echo $row['dis_control_number'];?><?php echo $status_end;?></td>
     </tr>
     <?php }?>
     </table>

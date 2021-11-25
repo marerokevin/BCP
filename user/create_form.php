@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <div type="currenttime" id="currentTime"></div>
   <div style="padding-left:16px; padding-right:16px;">
     <div class="Form">
-      <form action="form.php" method="post">
+      <form action="create_form.php" method="post">
         <h2 class="text-center">Work Information - Form</h2>
         <h3 class="text-center">Employee Details</h3>
 
