@@ -8,5 +8,4 @@ CREATE TABLE users (
     user_department varchar(256) not null,
     user_pwd varchar(256) not null,
     user_cpwd varchar(256) not null,
-    user_level varchar(13) not null,
-    );
+    user_level varchar(13) not null);
