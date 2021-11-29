@@ -73,50 +73,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     shrink-to-fit=no">
 <body>
 <?php
+
     
     if($showAlert) {
     
-        echo ' <div class="alert alert-success 
-            alert-dismissible fade show" role="alert">
-    
+        echo '<div class="alert-success" role="alert">
+        <button type="button" class="closebtn-success"
+            data-dismiss="alert" aria-label="Close">
             <strong>Success!</strong> Your account is 
-            now created and you can login. 
-            <button type="button" class="close"
-                data-dismiss="alert" aria-label="Close"> 
-                <span aria-hidden="true">×</span> 
-            </button> 
-        </div> '; 
+        now created and you can login.  
+            <span aria-hidden="true">×</span> 
+        </button> 
+    </div>'; 
     }
     
     if($showError) {
     
-        echo ' <div class="alert alert-danger 
-            alert-dismissible fade show" role="alert"> 
-        <strong>Error!</strong> '. $showError.'
-    
-       <button type="button" class="close" 
-            data-dismiss="alert aria-label="Close">
+        echo '<div class="alert-danger" role="alert"> 
+        <button type="button" class="closebtn-error" 
+            data-dismiss="alert" aria-label="Close">
+            <strong>Error!</strong> '. $showError.'
             <span aria-hidden="true">×</span> 
-       </button> 
-     </div> '; 
+        </button> 
+    </div>'; 
    }
         
     if($exists) {
-        echo ' <div class="alert alert-danger 
-            alert-dismissible fade show" role="alert">
-    
-        <strong>Error!</strong> '. $exists.'
-        <button type="button" class="close" 
-            data-dismiss="alert" aria-label="Close"> 
+        echo '<div class="alert-danger" role="alert">
+        <button type="button" class="closebtn-error" 
+            data-dismiss="alert" aria-label="Close">
+            <strong>Error!</strong> '. $exists.' 
             <span aria-hidden="true">×</span> 
         </button>
-       </div> '; 
-     }
+    </div>'; 
+    }
    
 ?>
-    
-<div class="wrapper">
-<div class="login">
     <h1 class="text-center">Sign Up</h1> 
     <form action="signup.php" method="post">
         <div class="form-group"> 
@@ -189,11 +181,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <p>Already have and account? <a href="login.php">Click here to login</a></p>
     </form> 
-    </div>
-    </div>
 
     <script type="text/javascript">
-
+function createAlert(message){
+  var alert = document.createElement("div");
+  alert.setAttribute("class","alert alert-danger alert-dismissible fade show");
+  alert.setAttribute("role","alert");
+  alert.innerHTML = message;
+  setTimeout(function() {
+    $(alert).fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove(); 
+    });
+  }, 8000);
+  document.getElementById("modalBody").appendChild(alert);
+}
 // Reg Button Disable
 function stoppedTyping(){
     if(document.getElementById("user_uid").value == "" || document.getElementById("user_fname").value == "" || document.getElementById("user_email").value == "" || document.getElementById("user_section").value == "" || document.getElementById("user_department").value == "" || document.getElementById("user_pwd").value == ""){

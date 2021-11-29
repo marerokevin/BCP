@@ -130,7 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="form-group"> 
               <label for="user_department">Department</label> 
               <input type="text" class="form-control" id="user_department"
-              name="user_department" aria-describedby="emailHelp" value="<?php echo ($_SESSION["user_level"]); ?>" readonly>
+              name="user_department" aria-describedby="emailHelp" value="<?php echo ($_SESSION["user_department"]); ?>" readonly>
           </div>
           
           <!--Section-->

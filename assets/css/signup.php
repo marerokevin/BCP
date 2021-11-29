@@ -1,26 +1,91 @@
 <?php
 	header('Content-type: text/css; charset: UTF-8');
 ?>
-body {font-family: Arial, Helvetica, sans-serif;}
+html { 
+	margin: 0;
+  	padding: 0;
+	width: 100%;
+	height:100%;
+	font-size: 16px;
+	align-items: center;
+	align-content: center;
+	font-family: Helvetica;
+	background: #f0f2f5;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+body {
+  width: 50%;
+  margin-top: 99px;
+  font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-/* Full-width input fields */
+.closebtn-error {
+  background-color: #ab0341;
+  color: white;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 
+.closebtn-success {
+  background-color: #04AA6D;
+  color: white;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 
-input, select {
-	width: 300px;
+div [class=alert-success] {
+	width: 100%;
 	height: 43px;
 	border: 1px solid #a6a6a6;
 	border-radius: 3px;
   margin-right: 3px;
 	padding-left: 9px;
-	color: #6c6c6c;
+  margin-bottom: 15px;
+	color: #000000;
+	background: #fcfcfc;
+  align-item: center;
+}
+
+div [class=alert-danger] {
+	width: 100%;
+	height: 43px;
+	border: 1px solid #a6a6a6;
+	border-radius: 3px;
+  margin-right: 3px;
+	padding-left: 9px;
+  margin-bottom: 15px;
+	color: #000000;
+	background: #fcfcfc;
+  align-item: center;
+}
+
+input, select {
+	width: 100%;
+	height: 43px;
+	border: 1px solid #a6a6a6;
+	border-radius: 3px;
+  margin-right: 3px;
+	padding-left: 9px;
+  margin-bottom: 15px;
+	color: #000000;
 	background: #fcfcfc;
   align-item: center;
 }
 
 select {
-  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 label {
@@ -31,21 +96,10 @@ label {
 }
 
 h1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+	text-align: center;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+
 
 form {
   padding-left: 8rem;
@@ -147,4 +201,12 @@ button:hover {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
+}
+
+@media (max-width: 640px) {
+  body {
+  width: 100%;
+  margin-top: 99px;
+  font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 }
