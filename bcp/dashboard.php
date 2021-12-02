@@ -60,10 +60,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="/form-test/assets/css/dashboard.php">
-    <link rel="shortcut icon" type="image/ico" href="/form-test/assets/images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/dashboard.php">
+    <link rel="shortcut icon" type="image/ico" href="/bcp-system/assets/images/favicon.ico"/>
     <!--JS-->
-    <script type="text/javascript" href="/form-test/assets/js/utoklek.js"></script>
+    <script type="text/javascript" href="/bcp-system/assets/js/utoklek.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.bundle.min.js"></script>
     <title>GPI-BCP Home</title>
   </head>
