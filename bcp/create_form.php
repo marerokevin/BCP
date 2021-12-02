@@ -113,8 +113,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
 
           <!--Employee ID-->
-          <div class="form-group"> 
-            <label for="user_eid">Employee ID</label> 
+          <div class="form-group">
+            <label for="user_eid">Employee ID</label>
             <input type="text" class="form-control" id="user_eid"
             name="user_eid" aria-describedby="emailHelp" value="<?php echo ($_SESSION["username"]); ?>" readonly>
           </div>
