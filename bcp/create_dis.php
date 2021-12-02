@@ -43,7 +43,7 @@ include 'serve_c.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GPI-BCP Request</title>
-        <link rel="stylesheet" type="text/css" href="/form-test/assets/css/create_dis.php">
+        <link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/create_dis.php">
     </head>
     <body>
     <!-- Top Nav -->
