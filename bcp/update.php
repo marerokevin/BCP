@@ -17,7 +17,7 @@ include 'dbconnect.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit</title>
-    <link rel="stylesheet" type="text/css" href="/form-test/assets/css/update.php">
+    <link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/update.php">
   </head>
   <body>
 <!-- Top Nav -->
