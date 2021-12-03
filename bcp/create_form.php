@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!--CSS-->
-      <link rel="stylesheet" type="text/css" href="/form-test/assets/css/form.php">
+      <link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/form.php">
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 <body>

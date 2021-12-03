@@ -1,6 +1,6 @@
 <div class="topnav" id="myTopnav">
     <a class="<?php active('dashboard.php');?>" href="./dashboard.php" >Home</a>
-    <a class="<?php active('create_dis.php');?>" href="./create_dis.php">Input Disaster</a>
+    <a class="<?php active('create_dis_tab.php');?>" href="./create_dis_tab.php">Input Disaster</a>
     <a class="<?php active('create.php');?>" href="./create.php">Create</a>
     <a class="<?php active('edit.php');?>" href="./edit.php">Update</a>
     <a class="<?php active('delete_tab.php');?>" href="./delete_tab.php">Delete</a>
