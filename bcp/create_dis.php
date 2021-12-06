@@ -123,16 +123,22 @@ include 'serve_c.php';
                 </div>
             </form>
         </div>
-          <!--Burger Script-->   
-      <script>
-        function Burjer() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+    <!--Burger Script-->   
+    <script>
+    function Burjer() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+        x.className += " responsive";
+        } else {
+        x.className = "topnav";
         }
-      </script>
+    }
+    </script>
+    <!--Automatic Date Script-->
+    <script>
+        let today = new Date().toISOString().substr(0, 10);
+        document.querySelector("#Sdate").valueAsDate = new Date();
+        document.querySelector("#Edate").valueAsDate = new Date();
+    </script>
     </body>
 </html>

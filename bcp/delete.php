@@ -9,8 +9,3 @@ include "serve_c.php"
     mysqli_query($conn,$sql);
     header("Location: {$_SERVER['HTTP_REFERER']}");
     ?>
-<!--Automatic Date Script-->
-<script>
-    let today = new Date().toISOString().substr(0, 10);
-    document.querySelector("date_encoded").valueAsDate = new Date();
-</script>
