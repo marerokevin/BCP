@@ -1,6 +1,6 @@
 <?php
    
-    $servername = "localhost"; 
+    $servername = "192.168.5.36"; 
     $username = "root"; 
     $password = "";
     $database = "bcp";
