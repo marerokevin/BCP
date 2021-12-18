@@ -127,10 +127,15 @@ include 'dbconnect.php';
     $Edate = date('M d Y', strtotime($_POST["Edate"]));
     $Stime = $_POST["Stime"];
     $Etime = $_POST["Etime"];
+    if ($disaster_desc== '' OR $dis_control_number == '' OR $disaster_type == '' OR $AreaofEffect == '' OR $encoded_by == '' OR $Sdate == '' OR $Edate == '' OR $Stime == '' OR $Etime == '') { ?>
+      <script>alert('All fields are required');</script>
+      <?php
+    } else {
       $sql = "UPDATE `disasterinfo` SET disaster_desc='$disaster_desc', dis_control_number='$dis_control_number', disaster_type='$disaster_type', AreaofEffect='$AreaofEffect', encoded_by='$encoded_by', Sdate='$Sdate', Edate='$Edate', Stime='$Stime', Etime='$Etime' where id='$dat_id'";
       mysqli_query($conn,$sql);
       ?>
       <script>alert('Information updated successfully');</script>
       <?php
     }
+  }
 ?>
