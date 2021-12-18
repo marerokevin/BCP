@@ -65,8 +65,8 @@ include "serve_c.php"
     ?>
     <tr>
     <td data-label="Control Number"><?php echo $row['dis_control_number'];?></td>
-    <td data-label="Disaster Type"><?php echo $row['disaster_type'];?></td>
     <td data-label="Disaster Description"><?php echo $row['disaster_desc'];?></td>
+    <td data-label="Disaster Type"><?php echo $row['disaster_type'];?></td>
     <td data-label="Start"><?php echo $Sdate_display; ?></td>
     <td data-label="End"><?php echo $Edate_display; ?></td>
     <td data-label="Status"><?php echo $stat_start;?><?php echo $row['dis_control_number'];?><?php echo $status_end;?></td>

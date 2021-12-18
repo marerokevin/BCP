@@ -3,11 +3,10 @@
 
 <?php 
 include 'dbconnect.php'; 
-
-    $data_id = $_GET["id"];
-    $sql = "SELECT bcp_yes, bcp_no, bcp_info FROM `workinfo` WHERE id='$data_id'";
-    $result=mysqli_query($conn,$sql);
-    $row=mysqli_fetch_array($result);
+  $data_id = $_GET["id"];
+  $sql = "SELECT bcp_yes, bcp_no, bcp_info FROM `workinfo` WHERE id='$data_id'";
+  $result=mysqli_query($conn,$sql);
+  $row=mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>

@@ -27,10 +27,12 @@ include 'serve_c.php';
         <caption>Disaster Information Management</caption>
         <thead>
             <tr>
-                <th scope="col" name="user_fname">Disaster Description</th>
                 <th>Control Number</th>
+                <th scope="col" name="user_fname">Disaster Description</th>
+                <th scope="col" name="user_fname">Disaster Type</th>
                 <th scope="col">Start</th>
                 <th scope="col">End</th>
+                <th scope="col">Affected Areas</th>
                 <th scope="col">Created by</th>
             </tr>
         </thead>
@@ -50,10 +52,12 @@ include 'serve_c.php';
         $Edate_display = date('M d Y h:ia', strtotime($Edatetime)); ?>
         <tbody>
             <tr>
-                <td data-label="Disaster Description"><?php echo $row['disaster_desc'];?></td>
                 <td data-label="Control Number"><?php echo $row['dis_control_number'];?></td>
+                <td data-label="Disaster Description"><?php echo $row['disaster_desc'];?></td>
+                <td data-label="Disaster Description"><?php echo $row['disaster_type'];?></td>
                 <td data-label="Start"><?php echo $Sdate_display; ?></td>
                 <td data-label="End"><?php echo $Edate_display; ?></td>
+                <td data-label="Disaster Description"><?php echo $row['AreaofEffect'];?></td>
                 <td data-label="Created by"><?php echo $row['encoded_by'];?></td>
                 <td><a type=button href="diasaster_update_func.php?id=<?php echo $row['id'];?>" id="button">Edit</a></td>
                 <td><a type=button href="disaster_delete_func.php?id=<?php echo $row['id'];?>" id="button">Delete</a></td>
