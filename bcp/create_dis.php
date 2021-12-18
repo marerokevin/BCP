@@ -60,13 +60,6 @@ include 'serve_c.php';
                     name="disaster_desc" required>
                 </div>
 
-                <!--Control_Number-->
-                <div class="form-group">
-                    <label for="dis_control_number">Control Number</label> 
-                    <input type="text" class="form-control" id="dis_control_number"
-                    name="dis_control_number" required>
-                </div>
-
                 <!--Time_Start-->        
                 <label for="start-grid">Start</label>
                 <div class="start-grid" id="start-grid">
@@ -110,6 +103,13 @@ include 'serve_c.php';
                     name="AreaofEffect" required>    
                 </div>
 
+                <!--Control_Number-->
+                <div class="form-group">
+                    <label for="dis_control_number">Control Number</label> 
+                    <input type="text" class="form-control" id="dis_control_number"
+                    name="dis_control_number" required onblur="gatherDataAndOutput()" readonly autofocus="">
+                </div>
+
                 <!--Encoded by-->
                 <div class="form-group"> 
                     <label for="encoded_by">Encoded by</label>
@@ -139,6 +139,40 @@ include 'serve_c.php';
         let today = new Date().toISOString().substr(0, 10);
         document.querySelector("#Sdate").valueAsDate = new Date();
         document.querySelector("#Edate").valueAsDate = new Date();
+    </script>
+
+    <script>
+        function getInitials(firstName, lastName) {
+            return (firstName[0] + lastName[0]).toUpperCase()
+        }
+
+        function getYear() {
+            return (new Date).getFullYear() % 100
+        }
+
+        function paddedNumber(number) {
+            var result = ""
+            for(var i = 4 - number.toString().length; i > 0; i--) {
+            result += "0"
+            }
+            return result + number
+        }
+
+        function makeStudentID(firstName, lastName, studentNumber) {
+            return getInitials(firstName, lastName) + paddedNumber(studentNumber) + getYear()
+        }
+
+        var sequenceNumber = 1
+        function gatherDataAndOutput() {
+            var firstName = document.getElementById("disaster_desc").value
+            var lastName = document.getElementById("disaster_type").value
+            var outputElement = document.getElementById("dis_control_number")
+
+            outputElement.value = makeStudentID(firstName, lastName, sequenceNumber)
+
+            sequenceNumber++; // make a different ID for the next student.
+        }
+    
     </script>
     </body>
 </html>

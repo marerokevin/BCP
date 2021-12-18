@@ -55,7 +55,7 @@ html, body {
     color: #ffffff;
   }
   .topnav.responsive .icon {
-    position: absolute;
+    <!-- position: absolute; -->
     width: 30px;
     height: 20px;
     right: 0;
@@ -198,7 +198,7 @@ th, td {
   padding: 8px;
 }
 
-a[type=button]{
+<!-- a[type=button]{
   outline:none;
   text-decoration: none;
   height: 30px;
@@ -227,125 +227,143 @@ a[type=button]{
   background: -ms-linear-gradient(top,  rgb(196, 184, 8) 0%,rgb(108, 97, 1) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgb(196, 184, 8) 0%,rgb(108, 97, 1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+} -->
+
+a[type=button-pending]{
+  outline:none;
+  text-decoration: none;
+  height: 30px;
+  width: 84px;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  padding-left: 15.5px;
+  padding-right: 15.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 2px;
+  border-color: #188700;
+  cursor: pointer;
+  opacity: 1;
+	color:#fff;
+  font-family: Helvetica;
+	font-size:15px;
+	outline: none;
+  background: #e4d913; /* Old browsers */
+  background: -moz-linear-gradient(top, #e4d913 0%, #898316 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4d913), color-stop(100%, #898316)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4d913 0%, #898316 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e4d913 0%, #898316 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e4d913 0%, #898316 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #e4d913 0%, #898316 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4d913', endColorstr='#898316',GradientType=0 ); /* IE6-9 */
 }
 
-a[type=button]:hover{
+a[type=button-Done]{
+  outline:none;
+  text-decoration: none;
+  height: 30px;
+  width: 84px;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  padding-left: 24.5px;
+  padding-right: 24.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 2px;
+  border-color: #188700;
+  cursor: pointer;
+  opacity: 0.9;
+	color:#fff;
+  font-family: Helvetica;
+	font-size:15px;
+	outline: none;
+  background: #c40707; /* Old browsers */
+  background: -moz-linear-gradient(top,  #c40707 0%, #7c0202 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c40707), color-stop(100%, #7c0202)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #c40707 0%, #7c0202 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #c40707 0%, #7c0202 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #c40707 0%, #7c0202 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #c40707 0%, #7c0202 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c40707', endColorstr='7c0202',GradientType=0 ); /* IE6-9 */
+}
+
+a[type=button-done]:hover{
+  color: #fff;
+  opacity: 1;
+  cursor: not-allowed;
+  background: #7c0202; /* Old browsers */
+  background: -moz-linear-gradient(top,  #7c0202 0%, #c40707 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7c0202), color-stop(100%, #c40707)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7c0202 0%, #c40707 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7c0202 0%, #c40707 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7c0202 0%, #c40707 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #7c0202 0%, #c40707 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c0202', endColorstr='c40707',GradientType=0 ); /* IE6-9 */
+}
+
+a[type=button-ongoing]{
+  outline:none;
+  text-decoration: none;
+  height: 30px;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px;
+  border-color: #188700;
+  cursor: pointer;
+  opacity: 0.9;
+	color:#fff;
+  font-family: Helvetica;
+	font-size:15px;
+	outline: none;
+  background: #84e212; /* Old browsers */
+  background: -moz-linear-gradient(top, #84e212 0%, #5a990d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #84e212), color-stop(100%, #5a990d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #84e212 0%, #5a990d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #84e212 0%, #5a990d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #84e212 0%, #5a990d 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #84e212 0%, #5a990d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e212', endColorstr='#5a990d',GradientType=0 ); /* IE6-9 */
+}
+
+a[type=button-ongoing]:hover{
+  color: #fff;
+  opacity: 1;
+  background: #5a990d; /* Old browsers */
+  background: -moz-linear-gradient(top, #5a990d 0%, #84e212 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a990d), color-stop(100%, #84e212)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #5a990d 0%, #84e212 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #5a990d 0%, #84e212 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #5a990d 0%, #84e212 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #5a990d 0%, #84e212 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a990d', endColorstr='#84e212',GradientType=0 ); /* IE6-9 */
+}
+
+a[type=button-pending]:hover{
   color: #fff;
   opacity:1;
-  background: rgb(108, 101, 0); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgb(108, 101, 0) 0%, rgb(45, 40, 0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stoprgb(108, 101, 0)), color-stop(100%,rgb(45, 40, 0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgb(108, 101, 0) 0%,rgb(45, 40, 0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgb(108, 101, 0) 0%,rgb(45, 40, 0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgb(108, 101, 0) 0%,rgb(45, 40, 0) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgb(108, 101, 0) 0%,rgb(45, 40, 0) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc0000',GradientType=0 ); /* IE6-9 */
+  cursor: wait;
+  background: #898316; /* Old browsers */
+  background: -moz-linear-gradient(top, #898316 0%, #898316 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #898316), color-stop(100%, #e4d913)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #898316 0%, #e4d913 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #898316 0%, #e4d913 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #898316 0%, #e4d913 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #898316 0%, #e4d913 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#898316', endColorstr='#e4d913',GradientType=0 ); /* IE6-9 */
 }
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-signupbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
- 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
-}
-.btn-primary {
-	color:#fff;
-	font-size:20px;
-	border: 1px solid #a6a6a6;
-	width: 90px;
-	height: 43px;
-	border-radius: 30px;
-	margin-top: 5px;
-	margin-right: 6px;
-	outline: none;
-  background: rgb(54,140,181); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgb(54,140,181) 0%, rgb(42,109,140) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(54,140,181)), color-stop(100%,rgb(42,109,140))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgb(54,140,181) 0%,rgb(42,109,140) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
 }
 
 table {
@@ -389,7 +407,7 @@ table th {
   table caption {
     font-size: 1.3em;
   }
-  
+
 thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -397,7 +415,7 @@ thead {
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
+    <!-- position: absolute; -->
     width: 1px;
   }
   

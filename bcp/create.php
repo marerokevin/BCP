@@ -13,7 +13,6 @@ include "serve_c.php"
     <body>
 <!-- Top Nav -->
 <?php include 'topnav.php'; ?>
-
     <!--next-->
     <table class="table table-hover">
     <caption>Create</caption>
