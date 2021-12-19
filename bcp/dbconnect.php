@@ -1,8 +1,8 @@
 <?php
    
-    $servername = "192.168.5.36"; 
+    $servername = "localhost"; 
     $username = "root"; 
-    $password = "";
+    $password = "gpi242$$$";
     $database = "bcp";
    
     $conn = mysqli_connect($servername, $username, $password, $database);
