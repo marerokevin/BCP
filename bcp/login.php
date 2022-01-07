@@ -99,13 +99,13 @@ if(empty(trim($_POST["username"]))){
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>GPI-BCP</title>
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/login.php">
+    <link rel="stylesheet" type="text/css" href="/BCP/assets/css/login.php">
     <!--FONT-->
 </head>
 <body>
     <div class="title">
             <a href="/bcp-system/user/login.php" class="header_logo">
-                <img src="/bcp-system/assets/images/logo.svg" alt="GPI-BCP">
+                <img src="/BCP/assets/images/logo.svg" alt="GPI-BCP">
             </a>
         <h1 class="text-center">Glory Philippines Inc.</h1>
         <h2 class="system_title">BCP - System</h2>

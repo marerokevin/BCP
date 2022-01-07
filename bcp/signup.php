@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <title>BCP - Sign Up</title>
 <head>
 <!--optional css-->
-<link rel="stylesheet" type="text/css" href="/bcp-system/assets/css/signup.php">
+<link rel="stylesheet" type="text/css" href="/BCP/assets/css/signup.php">
 </head>
 
 
